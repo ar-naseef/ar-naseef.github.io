@@ -11,3 +11,11 @@ body {
     color: brown;
     text-align: center;
 }
+
+.author {
+	font-size: 25px;
+	text-align: center;
+	color: chocolate;
+	padding-left: 50%;
+	margin-top: -30px;
+}
