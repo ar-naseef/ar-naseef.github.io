@@ -1,12 +1,75 @@
 <html>
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Wellcome..!</title>
+    <!--bootstrap CDN<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="/home/naseef/prog/Apple EYE site(2016.08.27)/New folder-current working 1/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <!--jquery CDN <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="/home/naseef/prog/Apple EYE site(2016.08.27)/New folder-current working 1/jquery-3.1.0.js"></script>
     <link rel="stylesheet" href="index.css">
+    <script src="index.js" type="text/javascript"></script>
 </head>
 <body>
     <div class="main_container">
+        <img src="img/blue_bubles.jpg">
         <h1 class="heading">Hello world</h1> 
-	<h4 class="author">-By ar-naseef</h4>
-    </div>    
+        <h4 class="author">-By ar-naseef</h4>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <button type="button" class="btn btn-lg">Contact me</button>
+        <button type="button" class="btn btn-lg">know about NASA</button>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        
+    </div>
+    
+    <!-- navi bar -->
+    <ul id="naviBar">
+        <li><a href="#">Top</a></li>
+        <!--<li><a href="#">Interested in Astronomy..!</a></li>-->
+        <li><a href="#">Contact me</a></li>
+        <li style="float:right"><a href="#">About this page</a></li>
+    </ul>
+    
+    <!-- NASA -->
+    <div class="jumbotron nasa">
+        <h1>NASA</h1>
+        <code>(National Aeronautics and Space Administration)</code>
+        <br/><br/><br/>
+        <img class="nasa_logo" src="img/logo_nasa.png">
+        <br/>
+    </div>
+    
+    <!-- NASA apod -->
+    <div class="nasa_apod">
+        <h3>NASA APOD</h3>
+        <p>Astronomy Picture of the Day is an interesting service provided by NASA. Each day a different image or photograph of our universe is featured, along with a brief explanation written by a professional Astronomer.</p>
+        <p>Click below button to see todays APOD.</p>
+        <br/>
+        <button class="btn btn-lg" onclick="show_apod()">Today's APOD</button>
+    </div>
+    <div class="apod_display" id="apod_container">
+        <h2>coming soon!</h2>
+        <!--<h3 id="apod_title">title</h3>
+        <img id="apod_img" src="img/apod_09_oct.jpg" >
+        <br/>
+        <p id="apod_brief"></p>-->
+    </div>
+    
+    <!-- getting some space -->
+    <div style="height:300px;"></div>
 </body>
 </html>

@@ -1,21 +1,137 @@
 body {
-    background-color: cornsilk;
-}
-.main_container {
+    background-color: #e0e0e0;
     
 }
 
-.heading {
-    font-size: 60px;
-    padding-top: 150px;
-    color: brown;
+.main_container {
+    position: relative;
+    overflow: hidden;
     text-align: center;
+}
+
+.main_container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 1000px;
+    opacity: 0.3;
+}
+
+.heading {
+    font-size: 80px;
+    padding-top: 170px;
+    color: #00024f;
+    text-align: center;
+    z-index: 2;
 }
 
 .author {
 	font-size: 25px;
 	text-align: center;
-	color: chocolate;
-	padding-left: 250px;
+	color: #8488ff;
+	padding-left: 300px;
 	margin-top: -10px;
+    z-index: 2;
+}
+
+.hline {
+    color: black;
+    width: 75%;
+}
+
+.btn.btn-lg {
+    background-color: #00024f;
+    color: aliceblue;
+    opacity: 0.7;
+}
+.btn.btn-lg:hover {
+    background-color: #8488ff;
+    color: #00024f;
+}
+
+.nasa {
+    text-align: center;
+}
+
+.nasa h1 {
+    color: #00024f;
+}
+
+
+
+.nasa_apod {
+    margin-left: 12.5%;
+    width: 75%;
+}
+
+.nasa_apod h3 {
+    color: #00024f;
+    font-weight: bold;
+}
+
+.nasa_apod p {
+    color: #435c84;
+}
+
+
+
+.apod_display {
+    margin-top: 30px;
+    background-color: #c1d4f2;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-left: 12.5%;
+    width: 75%;
+    text-align: center;
+    display: none;
+}
+.apod_display img {
+    height: 500px;
+}
+.apod_display h3 {
+    color: #00024f;
+    padding-bottom: 10px;
+}
+
+/* styles for navigation bar */
+
+li {
+    display: inline;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+li a {
+    display: block;
+    color: #9e9e9e;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: #000;
+    border-radius:15px 2px;
+    font-weight: bold;
+}
+
+li a:hover {
+    background-color: #5e8edb;
+    color: black;
+}
+
+#naviBar {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: auto;
+    border-radius: 15px 2px;
+    width: 70%;
+    right: 5%;
+    left: 5%;
+    position: fixed;
+    bottom: 25px;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #334e7a;
 }
