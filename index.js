@@ -24,6 +24,19 @@ $(window).scroll(function(){
 //js to show apod
 //var show_apod_btn = document.getElementById("show_apod_btn");
 
+//produce link to the apod page...
+
+function getDate(date) {
+    var hlink = "";
+    var jdate = "";
+    
+    jdate = date.charAt(2)+date.charAt(3)+date.charAt(5)+date.charAt(6)+date.charAt(8)+date.charAt(9);
+    
+    hlink = "http://apod.nasa.gov/apod/ap" + jdate +".html";
+    return hlink;
+}
+
+
 var json_array = [];
 
 function showApod() {
@@ -67,17 +80,18 @@ function getContents() {
                     apod_brief.innerHTML = json_array["explanation"];
 
                     //set date
+                    var link = getDate(json_array["date"]);
                     var apod_date = document.getElementById("apod_date");
-                    apod_date.innerHTML = "date : " + json_array["date"];
+                    apod_date.innerHTML = "date : " + json_array["date"] + "<br/><a href=\""+link+"\">know more...</a>";
                 } else {
                     //set title
                     var apod_title = document.getElementById("apod_title");
-                    apod_title.innerHTML = json_array["title"] + "<br/><br/><br/><h4>media doesn't support..</h4>";
+                    apod_title.innerHTML = json_array["title"];
 
-//                    //set img
-//                    var apod_img = document.getElementById("apod_img");
-//                    apod_img.style.display = "inherit";
-//                    apod_img.src = json_array["url"];
+                    //set video
+                    var apod_iframe = document.getElementById("adod_iframe");
+                    adod_iframe.style.display = "inherit";
+                    adod_iframe.src = json_array["url"];
                     
 
                     //ser brief exp
@@ -85,8 +99,9 @@ function getContents() {
                     apod_brief.innerHTML = json_array["explanation"];
 
                     //set date
+                    var link = getDate(json_array["date"]);
                     var apod_date = document.getElementById("apod_date");
-                    apod_date.innerHTML = "date : " + json_array["date"];
+                    apod_date.innerHTML = "date : " + json_array["date"] + "<br/><a target=\"_blank\" href=\""+link+"\">know more...</a>";
                 }
                 
             } else {
@@ -97,7 +112,7 @@ function getContents() {
             }
         } else {
             //loading
-            console.log("loading");
+            //console.log("loading");
         }
     };
     
