@@ -83,15 +83,21 @@ body {
     padding-bottom: 50px;
     margin-left: 12.5%;
     width: 75%;
-    text-align: center;
     display: none;
 }
 .apod_display img {
+    margin: auto;
     height: 500px;
+    display: none;
 }
 .apod_display h3 {
+    text-align: center;
     color: #00024f;
     padding-bottom: 10px;
+}
+.apod_display p {
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 /* styles for navigation bar */
