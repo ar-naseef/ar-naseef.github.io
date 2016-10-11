@@ -82,7 +82,7 @@ function getContents() {
                     //set date
                     var link = getDate(json_array["date"]);
                     var apod_date = document.getElementById("apod_date");
-                    apod_date.innerHTML = "date : " + json_array["date"] + "<br/><a href=\""+link+"\">know more...</a>";
+                    apod_date.innerHTML = "date : " + json_array["date"] + "<br/><a target=\"_blank\" href=\""+link+"\">know more...</a>";
                 } else {
                     //set title
                     var apod_title = document.getElementById("apod_title");
