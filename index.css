@@ -73,6 +73,10 @@ body {
 .nasa_apod p {
     color: #435c84;
 }
+.nasa_logo {
+    height: 45px;
+    text-align: center;
+}
 
 
 
