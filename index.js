@@ -1,7 +1,6 @@
 var scrolled = false;
 var x = 100;
 $(window).scroll(function(){
-    
     var scrollY = $(window).scrollTop();
     if (scrollY > x && scrolled == false) {
         // sticked to bottom
@@ -21,7 +20,30 @@ $(window).scroll(function(){
     //console.log(scrollY + " px" + " " + scrolled);
 });
 
-//js to show apod
+// jquery to scroll to a anchor in the same page
+$(function() {
+    //catch all the a tags
+    $("a").click(function() {
+        //console.log(this.hash);
+        if (this.hash) {
+            //remove # sighn
+            var hash = this.hash.substr(1);
+            
+            //get the positin of a name
+            var $toElement = $("a[name="+hash+"]");
+            var toPosition = $toElement.position().top;
+            
+            var correctedToPosi = toPosition + $(window).scrollTop();
+            $("body,html").animate({
+                scrollTop : correctedToPosi
+            },1000,"easeOutExpo")
+            //console.log(toPosition +" " + $(window).scrollTop());
+            return false;
+        }
+    });
+});
+
+//***js to show apod
 //var show_apod_btn = document.getElementById("show_apod_btn");
 
 //produce link to the apod page...
