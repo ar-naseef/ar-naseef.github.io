@@ -109,6 +109,14 @@ body {
     margin: auto;
 }
 
+.about_me {
+    text-align: right;
+}
+
+.jumbotron.footer {
+    background-color: #bad3fc;
+}
+
 /* styles for navigation bar */
 
 li {
@@ -133,6 +141,10 @@ li a {
 
 li a:hover {
     background-color: #5e8edb;
+    color: black;
+}
+
+li a:visited {
     color: black;
 }
 
