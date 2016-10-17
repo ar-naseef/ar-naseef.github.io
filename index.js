@@ -36,7 +36,7 @@ $(function() {
             var correctedToPosi = toPosition + $(window).scrollTop();
             $("body,html").animate({
                 scrollTop : correctedToPosi
-            },1000,"easeOutExpo")
+            },1500,"easeOutExpo")
             //console.log(toPosition +" " + $(window).scrollTop());
             return false;
         }

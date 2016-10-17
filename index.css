@@ -13,8 +13,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: auto;
-    height: 1000px;
+    width: 100%;
+    height: auto;
     opacity: 0.3;
 }
 
@@ -95,6 +95,7 @@ body {
     display: none;
 }
 .apod_display h3 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
     text-align: center;
     color: #00024f;
     padding-bottom: 10px;
@@ -109,12 +110,58 @@ body {
     margin: auto;
 }
 
+#apod_brief {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+/*CSS for footer*/
+
 .about_me {
     text-align: right;
+    padding: 5px;
 }
 
 .jumbotron.footer {
+    padding-top: 15px;
+    padding-bottom: 0;
     background-color: #bad3fc;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    margin-bottom: 0;
+}
+
+.jumbotron p {
+    font-size: 13px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0;
+}
+
+.jumbotron h4 {
+    padding: 15px;
+    padding-bottom: 0px;
+}
+
+td.vr_line0 {
+    background-color: black;
+    height: 25px;
+}
+
+td.vr_line1 {
+    background-color: black;
+    height: 50px;
+}
+
+td.vr_line {
+    background-color: black;  
+}
+
+.table>tbody>tr>td {
+    border-top: 0;
+    padding: 1px;
+}
+
+.table {
+    margin-bottom: 0;
 }
 
 /* styles for navigation bar */
