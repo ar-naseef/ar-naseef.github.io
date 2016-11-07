@@ -195,6 +195,11 @@ li a:visited {
     color: black;
 }
 
+a:focus, a:hover {
+    color: black;
+    text-decoration: none;
+}
+
 #naviBar {
     padding-top: 5px;
     padding-bottom: 5px;
