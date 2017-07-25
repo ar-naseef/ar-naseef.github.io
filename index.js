@@ -70,7 +70,6 @@ function showApod() {
 }
 
 function getContents() {
-
     var xmlreq = new XMLHttpRequest();
     xmlreq.open("GET", "https://api.nasa.gov/planetary/apod?api_key=EeJZi2jrsbbR96g169oVfq4f788ZrUEQBy9hu27R", true);
     //&date=2016-10-09
