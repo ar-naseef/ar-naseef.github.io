@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>JS Clock</title>
+    <style type="text/css">
+        #svgout {
+            background-color: beige;
+        }
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body onload="startclock()">
+
+<h2 id="dig_time"></h2>
+    
+<svg id="svgout" width="400" height="400">
+    
+</svg>
+<script src="snap.svg-min.js"></script>
+<script type="text/javascript">
+    function startclock() {
+        var s = Snap("#svgout");
+       // console.log("dklsghf");
+        
+        var dig_time = document.getElementById("dig_time");
+        var anim = setInterval(change, 500);
+        
+        var hr = s.line(200,200,200,100).attr({
+            stroke: "red",
+            strokeWidth: 3
+        });
+        var mn = s.line(200,200, 200,60).attr({
+            stroke: "green",
+            strokeWidth: 4
+        });
+        
+        var se = s.line(200,200, 200,30).attr({
+            stroke: "black",
+            strokeWidth: 2
+        });      
+        
+        //12
+        var m12 = s.line(200,10,200,30).attr({
+            stroke: "black",
+            strokeWidth: 2
+        }); 
+        
+        //6
+        var m6 = s.line(200,370,200,390).attr({
+            stroke: "black",
+            strokeWidth: 2
+        });
+
+        //3
+        var m12 = s.line(370,200,390,200).attr({
+            stroke: "black",
+            strokeWidth: 2
+        });
+        
+        //9
+        var m9 = s.line(10,200,30,200).attr({
+            stroke: "black",
+            strokeWidth: 2
+        });
+        
+        var date = new Date();
+        
+        function draw(hour, min, sec) {
+            se.transform("r"+sec*6+",200,200")
+            mn.transform("r"+min*6+",200,200")
+            hr.transform("r"+((hour+min/60)*30)+",200,200");
+
+        }
+        
+        
+        function change() {
+            var date = new Date();
+            var hour = date.getHours() % 12;
+            var min = date.getMinutes();
+            var sec = date.getSeconds();
+            draw(hour, min, sec);
+            dig_time.innerHTML = hour + ":" + min + ":" + sec;
+            
+            
+        }
+    }
+    //console.log(date.getHours());
+</script>
+
+</body>
+</html>
