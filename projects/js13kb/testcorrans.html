@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>corrct ans test</title>
+</head>
+<body>
+	<svg height='200' widht='200'>
+        <rect id='elem' x='50' y='50' height='50' width='50' fill='white' stroke='red' stroke-width='3'></rect>
+    </svg>
+    <button id="btn" onclick="show()">click me!!</button>
+    
+    <script type="text/javascript">
+        function show() {
+            var elem = document.getElementById('elem');
+            var count = 10;
+            var i = setInterval(change,500);
+            function change() {
+                if (count >= 0 && count%2 == 0) {
+                    elem.setAttribute('stroke', 'green');
+                    count--;
+                } else if ( count >= 0 && count%2 == 1) {
+                    elem.setAttribute('stroke', 'red');
+                    count--;
+                } else {
+                    clearInterval(i);
+                    alert('hellooooo');
+                }
+                console.log("hi");
+            }
+        }
+    </script>
+</body>
+</html>

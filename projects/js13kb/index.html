@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>13kb js</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+ <body onload="animate()"> 
+	<h2 id="heading">Loading...</h2>
+	<div id="menu_btn">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+	</div> 
+
+	<div id="score_board">
+		<h3 id="score">Score:</h3>
+		<h3 id="lives">Lives:</h3>
+		<h3 id="leveldis">Level:</h3>
+	</div>
+
+	<div id="container">
+		<div id="loader">
+			<div id="animater_cover">
+				<div id="animater"></div>
+			</div>
+		</div>
+		
+		<div id="menu">
+			<h3 id="play_btn">Play</h3>
+			<h3 id="how_btn">How to play</h3>
+			<h3 id="about_btn">About</h3>
+		</div>
+
+		<svg id="main_grid"></svg>
+		<svg id="timer_cont" height="200" width="200">
+			<circle id="timer" cx="100" cy="100" r="90" stroke="black" stroke-width="3" fill="white" />
+		</svg> 
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
